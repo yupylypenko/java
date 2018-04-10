@@ -20,7 +20,7 @@ pipeline {
       stage ('Deploy Stage') {
         steps{
           withMaven (maven : 'Maven_3_5_3') {
-            sh 'mvn package'
+            sh 'mvn install'
           }
         }
 
